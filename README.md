@@ -6,7 +6,7 @@
 
 #
 
-[🔗 Clique aqui para acessar]()
+[🔗 Clique aqui para acessar](https://marcusviniciusslima.github.io/nlw-desafio-explorer/)
 
 #
 
