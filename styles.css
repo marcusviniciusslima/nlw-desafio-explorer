@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    /*Tirar todas as margens do navegador*/
+    padding: 0;
+    /*Tirar todos os paddings do navegador*/
+    box-sizing: border-box;
+    /**/
+}
+
+
+header {
+    padding-top: 32px;
+    /*text-align: center;*/
+
+    height: calc(120px + 32px);
+
+    transition: transform .3s;
+}
+
+header div{ /*Divs não tem propriedas de texto, então, o align center não funciona, para isso vamos usar o margin auto*/
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header img {
+    width: 100%; /*100% em relação a div*/
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+    /*Para não ter nenhum pontinho do lado da lista*/
+}
+
+section ul li {
+    transition: transform .3s;
+    /*Animação*/
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+    /*Executar animação*/
+}
+
+body * {
+    font-family: "Montserrat";
+    line-height: 160%;
+    /*Altura da linha*/
+}
+
+body {
+    background-image: url(./assets/fundo.jpg);
+    /*Colocar a imagem de fundo*/
+    background-position: top center;
+    /*Botar imagem no topo e centralizar*/
+    background-size: 100% auto;
+    /*100% na horizontal, e automatico para altura*/
+    background-repeat: no-repeat;
+    /*Para não repetir a imagem*/
+    background-color: #121214;
+    /*Cor do fundo*/
+}
+
+main {
+    max-width: 580px;
+    /*Todas as coisa que existem dentro de main vão procurar ter essa largura maxima (580px)*/
+    width: 90%;
+    /*Quando for menor que 580px vai ter o tamanho de 90% da largura da tela*/
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+
+    margin-top: 32px;
+    /*Separar foto perfil do cartao*/
+}
+
+section {
+    color: white;
+
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    /*Fazer tipo um rgb*/
+
+    padding-top: 4px;
+    /*Pra aparecer a linha do rgb no cartão*/
+
+    border-radius: 10px;
+    /*Arredondamento da linha do rgb*/
+}
+
+
+section div {
+    background-color: #262629;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+    /*Espaço de uma letra para outra*/
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #C1C1C1;
+
+}
+
+section ul {
+    margin-top: 24px;
+    /*Espaço entre caixas*/
+    display: flex;
+    /*Botar uma img do lado da outra*/
+    gap: 16px;
+    /*Espaçamento de linha e coluna*/
+
+    flex-wrap: wrap;
+    /*Pra quando não tiver mais espaço na caixa a imagem ir para baixo*/
+
+}
+
+.movies-list img {
+    border-radius: 8px;
+    /*Borda arredondada da img dos filmes*/
+    width: 150px;
+    /*Tamanho das imgs*/
+    border: 1px solid #555555;
+    /*Borda nas imagens*/
+}
+
+.series-list img {
+    border-radius: 8px;
+    /*Borda arredondada da img dos filmes*/
+    width: 150px;
+    /*Tamanho das imgs*/
+    border: 1px solid #555555;
+    /*Borda nas imagens*/
+
+}
+
+/*Animation*/
+
+header div {
+    animation: fromTop .7s .3s backwards; /*Backwards serve para manter a animação na div ate passar o delay*/
+}
+
+main section {
+    animation: fromBottom .7s backwards; 
+}
+
+main section:nth-child(1) {
+    animation-delay: .0s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
